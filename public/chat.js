@@ -1,4 +1,4 @@
-const socket = io.connect('http://localhost:4000');
+const socket = io.connect('http://localhost:4000', { transport : ['websocket'] });
 
 let message = document.getElementById('message');
 let head = document.getElementById('head');
