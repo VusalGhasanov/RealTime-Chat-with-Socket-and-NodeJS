@@ -7,7 +7,7 @@ const server = app.listen(4000, function(){
     console.log('Server starting!');
 });
 
-let io = socket(server);
+let io = socket(server, { transport : ['websocket'] });
 io.on('connection', function(socket){
     socket.on('chat',function(data){
         io.sockets.emit('chat',data)
